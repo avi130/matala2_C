@@ -52,7 +52,7 @@ scanf(" %c", &x);
 if( x == 'O')
 { 
     printf("Initial deposit?\n ");
-    scanf("%lf",&y);
+    if(scanf("%lf",&y)==1){
     y= twoAfterPoint(y);
     int ansO= O(y);
     if( ansO==-1 || ansO==-2 ||ansO==-3 ||ansO==-4 ||ansO==-5 ||ansO==-6)
@@ -64,10 +64,17 @@ if( x == 'O')
         printf("your new account number is: %d \n",ansO  );
     }
     }
+    else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
+    
+}
    
 else if ( x == 'B'){
     printf("Please enter your account number: \n");
-    scanf("%d", &z);
+    if(scanf("%d", &z)==1)
+    {
      if(z>950 || z<901)
     {
         printf("you entered wrong account\n");
@@ -87,11 +94,17 @@ else if ( x == 'B'){
     printf("you have %.2f $ in account number %d \n", y, z);
     } 
     }
+    }
+        else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
 }
 else if ( x=='D')
 {
     printf("Please enter your account number: \n");
-    scanf("%d", &z);
+    if(scanf("%d", &z)==1)
+    {
      if(z>950 || z<901)
     {
         printf("you entered wrong account\n");
@@ -114,11 +127,18 @@ else if ( x=='D')
     printf("now you have %.2f $ in your account \n", s);
     } 
     }
+    }
+        else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
 }
 else if ( x=='W')
 {
     printf("Please enter your account number: \n");
-    scanf("%d", &z);
+    if(scanf("%d", &z)==1)
+    {
+
     if(z>950 || z<901)
     {
         printf("you entered wrong account\n");
@@ -143,11 +163,17 @@ else if ( x=='W')
     printf("now you have %.2f $ in your account \n", s);
     } 
     }
+    }
+        else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
 }
 else if ( x=='C')
 {
     printf("Please enter your account number: \n");
-    scanf("%d", &z);
+    if(scanf("%d", &z)==1)
+    {
      if(z>950 || z<901)
     {
         printf("you entered wrong account\n");
@@ -163,6 +189,11 @@ else if ( x=='C')
         printf("This account closed successfuly  \n");
     }
     }
+    }
+        else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
 } 
 else if ( x=='P')
 {
@@ -171,7 +202,7 @@ else if ( x=='P')
 else if ( x=='E')
 {
     E();
-    printf("all the accouns are closed \n");
+    printf("all the accouns are clean and the bank is closed. \n");
     if (x=='E')
     {
         again='n';
@@ -181,9 +212,21 @@ else if ( x=='E')
 else if ( x=='I')
 {
     printf("Please enter a present of interest: \n");
-    scanf("%lf", &y);
-    y= twoAfterPoint(y);
-    I(y); 
+    if(scanf("%lf", &y)==1)
+    {
+     if(y<=0)
+        {
+            printf("you cant insert a negative present\n");
+        }
+    else{
+            y= twoAfterPoint(y);
+        I(y); 
+    }
+    }
+        else
+    {
+        printf("wrong input.please insert an integer\n");
+    }
 }
 else
 {
