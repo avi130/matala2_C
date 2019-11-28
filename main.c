@@ -1,6 +1,6 @@
 #include "myBank.h"
 #include <stdio.h>
-#include <string.h>
+#include <string.h>  
 
 double twoAfterPoint(double y){
     y=y*100;
@@ -8,6 +8,7 @@ double twoAfterPoint(double y){
     y=y/100;
     return y;
 }
+
 void printErors(double x){
    if(x==-1)
     {

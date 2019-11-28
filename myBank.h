@@ -1,19 +1,18 @@
 
-double O(); // open a new acount if close,put mony, syso new num acount.
+double O(); 
 
-double B(int x);// get num acount, syso how much left.
+double B(int x);
 
-double D(int x, double y); //get num acount, put mony and syso how much left.
+double D(int x, double y);
 
-double W(int x, double y);//get num acount, take mony if has and syso how much left.
+double W(int x, double y);
 
-int C(int x); //get num acount, close acount only if open.
+int C(int x); 
 
-void P(); //מדפיסה את סכום הכסף שיש בכל חשבון פתוח
+void P(); 
 
-void E(); // סוגר את כל החשבונות הפתוחים,מאפס את הכסף שבהם וסוגר את התוכנית
+void E(); 
 
-void I(double x); // הוספת ריבית בשיעור אחוז נתון לכל החשבונות הפתוחים
+void I(double x); 
 
-int isOpen(int x); //בודק אם החשבון בנק פתוח
-
+int isOpen(int x); 
