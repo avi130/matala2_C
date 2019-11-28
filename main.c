@@ -41,15 +41,15 @@ char again='y';
 do
 {
 again='y';    //while again == y run again.
-char x;
+char transactionType;
 double y=0;
 int z=0;
 
 
 printf("Transaction type ?\n"); //ask what you want to do
-scanf(" %c", &x);
+scanf(" %c", &transactionType);
 
-if( x == 'O')
+if( transactionType == 'O')
 { 
     printf("Initial deposit?\n ");
     if(scanf("%lf",&y)==1){
@@ -71,7 +71,7 @@ if( x == 'O')
     
 }
    
-else if ( x == 'B'){
+else if ( transactionType == 'B'){
     printf("Please enter your account number: \n");
     if(scanf("%d", &z)==1)
     {
@@ -100,7 +100,7 @@ else if ( x == 'B'){
         printf("wrong input.please insert an integer\n");
     }
 }
-else if ( x=='D')
+else if ( transactionType=='D')
 {
     printf("Please enter your account number: \n");
     if(scanf("%d", &z)==1)
@@ -133,7 +133,7 @@ else if ( x=='D')
         printf("wrong input.please insert an integer\n");
     }
 }
-else if ( x=='W')
+else if ( transactionType=='W')
 {
     printf("Please enter your account number: \n");
     if(scanf("%d", &z)==1)
@@ -169,7 +169,7 @@ else if ( x=='W')
         printf("wrong input.please insert an integer\n");
     }
 }
-else if ( x=='C')
+else if ( transactionType=='C')
 {
     printf("Please enter your account number: \n");
     if(scanf("%d", &z)==1)
@@ -195,21 +195,21 @@ else if ( x=='C')
         printf("wrong input.please insert an integer\n");
     }
 } 
-else if ( x=='P')
+else if ( transactionType=='P')
 {
     P();
 } 
-else if ( x=='E')
+else if ( transactionType=='E')
 {
     E();
     printf("all the accouns are reset and the bank is closed. \n");
-    if (x=='E')
+    if (transactionType=='E')
     {
         again='n';
     }
 
 } 
-else if ( x=='I')
+else if ( transactionType=='I')
 {
     printf("Please enter a present of interest: \n");
     if(scanf("%lf", &y)==1)
