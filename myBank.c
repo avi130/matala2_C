@@ -3,7 +3,8 @@
 #include <math.h>
 
 
-static double a [2][50]={{0},{0}};
+
+double a [2][50]={{0},{0}};
 
 int isOpen(int x){
     if (a[1][x-901]==0)
@@ -35,7 +36,7 @@ double O(double x){
     }
     if (acount==-1)
     {
-        return -1;
+        return -7;
     }
     else
     {

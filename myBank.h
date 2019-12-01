@@ -1,4 +1,5 @@
-
+#ifndef MYBANK
+#define MYBANK
 double O(); 
 
 double B(int x);
@@ -16,3 +17,7 @@ void E();
 void I(double x); 
 
 int isOpen(int x); 
+
+extern double a [2][50];
+
+#endif 
